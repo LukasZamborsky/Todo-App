@@ -1,0 +1,475 @@
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  .new-task-wrapper {
+    margin-bottom: 20px;
+  }
+  
+  .task-edit-form {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f4f8;
+    border-radius: 8px;
+  }
+  
+  .task-edit-form input,
+  .task-edit-form textarea,
+  .task-edit-form select {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  .task-edit-form textarea {
+    resize: vertical;
+    height: 60px;
+  }
+  
+  .task-edit-actions {
+    grid-column: span 2;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+  
+  .task-edit-actions button {
+    padding: 8px 12px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+  }
+  
+  .save-button {
+    background-color: #10b981;
+    color: white;
+  }
+  
+  .cancel-button {
+    background-color: #ef4444;
+    color: white;
+  }
+  
+  .add-task-button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .add-task-form {
+    background-color: #f9fafb;
+    border: 1px dashed #94a3b8;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  .new-task-toggle {
+    padding: 10px 16px;
+    margin-bottom: 10px;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .new-task-toggle:hover {
+    background-color: #059669;
+  }
+  
+  .new-task-card,
+  .edit-task-card {
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .new-task-card input,
+  .edit-task-card input,
+  .new-task-card textarea,
+  .edit-task-card textarea,
+  .new-task-card select,
+  .edit-task-card select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .edit-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-buttons button {
+    padding: 8px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .edit-buttons button:first-child {
+    background-color: #2563eb;
+    color: white;
+  }
+  
+  .edit-buttons button:last-child {
+    background-color: #ef4444;
+    color: white;
+  }
+  
+  .admin-btn {
+    margin-bottom: 20px;
+    background-color: #1e3a8a;
+    color: white;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .filters input,
+  .filters select {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    flex: 1;
+  }
+  
+  .new-task {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .new-task input,
+  .new-task select {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    flex: 1;
+  }
+  
+  .task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    background: #f9fafb;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  
+  .task-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .task-content {
+    flex: 1;
+  }
+  
+  .status-icon {
+    font-size: 24px;
+    margin-right: 12px;
+  }
+  
+  .task-content strong {
+    font-size: 18px;
+  }
+  
+  .task-content p {
+    margin: 4px 0;
+    color: #555;
+  }
+  
+  .tags {
+    margin-top: 6px;
+  }
+  
+  .tag {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1e3a8a;
+    padding: 3px 8px;
+    margin: 2px;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+  
+  .edit-buttons button {
+    margin-right: 10px;
+  }
+  
+  .admin-actions button {
+    margin-left: 5px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .pagination button {
+    padding: 6px 12px;
+    font-size: 14px;
+    border: none;
+    background-color: #1e40af;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .pagination button:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+  }
+  .app-wrapper {
+    display: flex;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .sidebar {
+    width: 220px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+  }
+  
+  .sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #fff;
+  }
+  
+  .task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: box-shadow 0.2s;
+  }
+  
+  .task-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .task-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  
+  .task-content {
+    flex: 1;
+    margin-left: 10px;
+  }
+  
+  .task-content strong {
+    font-size: 16px;
+  }
+  
+  .tags {
+    margin-top: 5px;
+  }
+  
+  .tag {
+    background-color: #e0f0ff;
+    border: 1px solid #90caf9;
+    color: #1565c0;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 5px;
+  }
+  
+  .admin-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-left: 8px;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .filters input,
+  .filters select {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  
+  .logout-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #e60000;
+  }
+  
+  .edit-task-card .tag-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  
+  .edit-task-card .tag-checkbox {
+    display: flex;
+    align-items: center; 
+    gap: 5px;
+    background-color: #f0f0f0;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 14px;
+  } 
+
+  
+  
+  .user-complete-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+  
+  .user-complete-btn button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+  }
+  
+  .user-complete-btn button:hover {
+    background-color: #45a049;
+  }
+
+  .new-tag-form {
+    background-color: #f4faff;
+    border: 1px solid #cce5ff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  
+  .new-tag-form h3 {
+    margin-bottom: 10px;
+  }
+  
+  .new-tag-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccd;
+    border-radius: 4px;
+  }
+  
+
+  .new-tag-form .tag-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .new-tag-form .tag-buttons button {
+    padding: 8px 14px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .new-tag-form .tag-buttons button:first-child {
+    background-color: #2563eb;
+    color: white;
+  }
+  
+  .new-tag-form .tag-buttons button:last-child {
+    background-color: #ef4444;
+    color: white;
+  }
