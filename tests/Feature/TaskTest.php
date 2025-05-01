@@ -15,6 +15,7 @@ class TaskTest extends TestCase
         $response = $this->postJson('/api/tasks', [
             'title' => 'New Task',
             'description' => 'Task description',
+            'is_completed' => false,
         ]);
 
         $response->assertStatus(201);
